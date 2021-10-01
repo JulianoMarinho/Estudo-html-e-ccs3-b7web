@@ -1,0 +1,726 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /*flex*/
+    display: flex;
+    justify-content: center;
+
+    /*Altura do header*/
+    height: 120px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 990px;
+
+}
+
+.logo {
+    display: flex;
+    /*para centralizar o logo*/
+    align-items: center;
+
+}
+
+.menu {
+    /*para por o menu no meio*/
+    display: flex;
+    align-items: center;
+}
+
+nav ul, 
+nav li{
+    /*para tirar os pontos*/
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+nav ul {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    
+    /*Para tirar o sublinhado*/
+    text-decoration: none;
+
+    /*para que os itens do menu fiquem uppercase*/
+    text-transform: uppercase;  
+    color: #727272;
+    
+}
+
+nav .active a,
+nav a:hover {
+    background-color: black;
+    color: #FFFF;
+    
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/banner.jpg');
+    /*Posicionar no centro*/
+    background-position: center;
+    /*tratar a imagem para atender celulares e monitores*/
+    background-size: cover;
+    height: 670px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.banner_headline {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner_headline h1 {
+    color: black;
+    font-size: 70px;
+    text-shadow: 5px 5px 10px grey;
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+}
+
+.banner_headline h2 {
+    color: black;
+    font-size: 22px;
+    text-shadow: 2px 2px 5px grey;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    max-width: 350px;
+}
+
+.banner_options {
+    
+    height: 210px;
+    display: flex;
+
+}
+.banner1,
+.banner2,
+.banner3 {
+    padding: 0;
+    flex: 1;
+    color: white;
+    padding: 20px;
+}
+
+.banner1 {
+    
+    background-color: #39aae1;
+    text-align: justify;
+    
+}
+
+.banner2 {
+    
+    background-color: #0079c7;
+    text-align: justify;
+    
+}
+
+.banner3 {
+    
+    background-color: #2b4c99;
+    
+}
+
+.banner_title {
+    font-size: 20px;
+}
+
+.banner_desc {
+    font-size: 12;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner_options a {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.hour_desc div{
+    margin-top: 25px;
+}
+
+.day_hour {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#geral {
+    display: flex;
+    justify-content: center;
+}
+
+#geral section {
+    flex: 2;
+}
+
+#geral aside {
+    flex: 1;
+}
+
+.widget_title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.widget_title_text {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.widget_title_bar {
+    width: 50px;
+    height: 3px;
+    background-color: #36a9e1;
+    margin-top: 10px;
+}
+
+.departament {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.departament div{
+    
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+   
+    
+    background-color: #36a9e1;
+}
+
+.departament div a{
+    text-decoration: none;
+}
+
+.widget_desc {
+    text-align: justify;
+}
+
+.widget_checkbox {
+    margin-top: 20px;
+}
+
+/*Para dar uma flexada nas noticias*/
+.flex {
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+article {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+article a {
+    text-decoration: none;
+}
+
+article .news_data{
+    /*para por um item do lado do outro*/
+    display: flex;
+    
+}
+
+article .news_posted_at {
+    background-color: #2b4c99;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 2px;
+}
+
+article .news_comments {
+    background-color: #39aae1;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+}
+
+article .news_thumbnail {
+    margin-top: 30px;
+}
+
+article .news_thumbnail img {
+    width: 100%;
+    height: auto;
+
+}
+
+article .news_title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: black;
+    font-size: 22px;
+}
+
+article .news_resume {
+    color: #5c5c5c;
+    font-size: 14px;
+    /*Espaçamento entre as linhas*/
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 30px;
+
+}
+
+
+footer {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer_menu {
+    display: flex;
+}
+
+.fm1, .fm2, .fm3 {
+    flex: 1;
+    color: white;
+    padding: 20px;
+}
+
+
+.fm1 {
+    
+    background-color: #39aae1;
+    text-align: justify;
+    
+}
+
+.fm2 {
+    
+    background-color: #0079c7;
+    text-align: justify;
+    
+}
+
+.fm3 {
+    
+    background-color: #2b4c99;
+    
+}
+
+.footer_area {
+    display: flex;
+    
+}
+
+.footer_areaitem {
+    flex: 1;
+    color: white;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+
+footer .widget_title_text{
+    color: white;
+}
+
+
+
+.footer_copy {
+    border-top: 1px solid #2c2c2c;
+    height: 40px;
+    color: #5c5c5c;
+    line-height: 40px;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+
+.fm_title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.fm_desc {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    
+}
+
+.fm_desc a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.footer_message {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footer_text {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #5c5c5c;
+}
+
+.footer_local {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #5c5c5c; 
+}
+
+.local_addres address {
+    
+    text-align: justify;
+    padding-right: 20px;
+}
+
+.local_contact {
+    
+    text-align: justify;
+    padding-left: 10px;
+    margin-top: 50px;
+}
+
+.email {
+    color: white;
+    padding-right: 10px;
+}
+
+
+.latest_text, .latest_tw {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: justify;
+    padding-right: 10px;
+}
+
+.latest_text a, .latest_tw a {
+    color: #39aae1;
+    text-decoration: none;
+}
+
+.latest_tw {
+    color: #5c5c5c; 
+}
+
+
+/*Para o menu mobile*/
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.mm_line{
+    height: 3px;
+    background-color: #39aae1;
+}
+
+
+/*responsividade*/
+
+@media (max-width: 1200px){
+
+    .banner_headline{
+        padding: 20px;
+    }
+    .banner_headline h1 {
+        font-size: 55px ;
+    }
+
+    .banner_headline h2 {
+        font-size: 16px;
+    }
+
+    .banner_options{
+        height: auto;
+        flex-direction: column;
+    
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+  
+
+    #geral section{
+        padding: 20px;
+        margin-top: 80px;
+        
+    }
+
+    #geral aside{
+        padding: 20px;
+        
+        
+    }
+
+
+
+    .footer_menu {
+        flex-direction: column;
+    }
+
+    .footer_area {
+        flex-direction: column;
+    }
+
+    .footer_local {
+        flex-direction: column;
+    }
+
+    .footer_copy {
+        padding: 20px;
+    }
+
+    /*Para ajustar o menu*/
+    header .container {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /*Por padrão, vai ser display none para nao aparecer (o menu nao vai quebrar o header)*/
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: white;
+    }
+
+    header {
+        height: auto;
+    }
+
+    .logo {
+        padding-left: 20px;
+    }
+    .menuMobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+
+}
+
+/*=======================================================================================*/
+@media (max-width: 670px){
+
+    .banner_headline{
+        padding: 20px;
+    }
+    .banner_headline h1 {
+        font-size: 55px ;
+    }
+
+    .banner_headline h2 {
+        font-size: 16px;
+    }
+
+    .banner_options{
+        height: auto;
+        flex-direction: column;
+    
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+  
+
+    #geral section{
+        padding: 20px;
+        margin-top: 120px;
+        
+    }
+
+    #geral aside{
+        padding: 20px;
+        
+        
+    }
+
+
+
+    .footer_menu {
+        flex-direction: column;
+    }
+
+    .footer_area {
+        flex-direction: column;
+    }
+
+    .footer_local {
+        flex-direction: column;
+    }
+
+    .footer_copy {
+        padding: 20px;
+    }
+
+    /*Para ajustar o menu*/
+    header .container {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /*Por padrão, vai ser display none para nao aparecer (o menu nao vai quebrar o header)*/
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: white;
+    }
+
+    header {
+        height: auto;
+    }
+
+    .logo {
+        padding-left: 20px;
+    }
+    .menuMobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+
+}
+
+
+
+/*=============================================================================*/
+@media (max-width: 370px){
+
+    .banner_headline{
+        padding: 20px;
+    }
+    .banner_headline h1 {
+        font-size: 55px ;
+    }
+
+    .banner_headline h2 {
+        font-size: 16px;
+    }
+
+    .banner_options{
+        height: auto;
+        flex-direction: column;
+    
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+  
+
+    #geral section{
+        padding: 20px;
+        margin-top: 160px;
+        
+    }
+
+    #geral aside{
+        padding: 20px;
+        
+        
+    }
+
+
+
+    .footer_menu {
+        flex-direction: column;
+    }
+
+    .footer_area {
+        flex-direction: column;
+    }
+
+    .footer_local {
+        flex-direction: column;
+    }
+
+    .footer_copy {
+        padding: 20px;
+    }
+
+    /*Para ajustar o menu*/
+    header .container {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction: column;
+        /*Por padrão, vai ser display none para nao aparecer (o menu nao vai quebrar o header)*/
+        display: none;
+    }
+
+    header {
+        height: auto;
+    }
+
+    .logo {
+        padding-left: 20px;
+    }
+    .menuMobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+
+}
